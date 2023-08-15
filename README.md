@@ -7,9 +7,9 @@
 
 
 My studies on Semi-supervised segmentation:
-- iMAS [CVPR'23], reserve the strong augmentations, but apply them based on the model training status and the instance differences. i.e., nstance-specific and Model-adaptive Supervision
-- Augseg [CVPR'23], revise the strong augmentation to prevent over-perturbations, increase the randomness to produce more prediction disagreement.
-- DPMS, reserve the strong augmentation, but apply simple yet effective stablization strategies. Simplest but equally effective.
+- **iMAS** [CVPR'23]: reserve the strong augmentations, but apply them based on the model training status and the instance differences. i.e., instance-specific and Model-adaptive Supervision
+- **Augseg** [CVPR'23]: revise the strong augmentation to prevent over-perturbations, increase the randomness (continuous v.s. discrete) to produce more prediction disagreement.
+- **DPMS**: reserve the strong augmentation, but apply simple yet effective stablization strategies. Simplest but equally effective.
 
 ## Performance on 2D and 3D datasets
 
