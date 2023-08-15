@@ -13,9 +13,9 @@ My studies on Semi-supervised segmentation:
 
 ## Performance on 2D and 3D datasets
 
-On 2D acdc
+On 2D acdc using Unet as backbone
 
-| Methods         | Labels on 2D ACDC | Dice($\uparrow$)     | Jaccard($\uparrow$)  | 95HD$\downarrow$    | ASD$\downarrow$     |
+| Methods         | Labels on 2D ACDC | Dice($\uparrow$)     | Jaccard($\uparrow$)  | 95HD($\downarrow$)    | ASD($\downarrow$)     |
 | --------------- | :---------------: | -------------------- | -------------------- | ------------------- | ------------------- |
 | UA-MT           |   3 labels (5%)   | 46.04                | 35.97                | 20.08               | 7.75                |
 | SASSNet         |         -         | 57.77                | 46.14                | 20.05               | 6.06                |
@@ -29,9 +29,9 @@ On 2D acdc
 
 
 
-On 3D LA
+On 3D LA using Vnet as backbone
 
-| Methods         | Labels on 3D LA | Dice($\uparrow$) | Jaccard($\uparrow$) | 95HD$\downarrow$ | ASD$\downarrow$ |
+| Methods         | Labels on 3D LA | Dice($\uparrow$) | Jaccard($\uparrow$) | 95HD($\downarrow$) | ASD($\downarrow$) |
 | --------------- | :-------------: | ---------------- | ------------------- | ---------------- | --------------- |
 | UA-MT           |    4 labels (5%)    | 82.26            | 70.98               | 13.71            | 3.82            |
 | SASSNet         |        -        | 81.60            | 69.63               | 16.16            | 3.58            |
@@ -40,6 +40,18 @@ On 3D LA
 | MC-Net          |        -        | 83.59            | 72.36               | 14.07            | 2.70            |
 | SS-Net          |        -        | 86.33            | 76.15               | 9.97             | 2.31            |
 | **DPMS (Ours)** |                 | **89.64**  $\pm 0.22$      |     **81.29** $\pm 0.35$            |        **5.99** $\pm 0.40$      | **1.77** $\pm 0.05$ |
+
+
+On 3D Pancreas using Vnet as backbone
+
+| Methods         | Labels on 3D LA | Dice($\uparrow$) | Jaccard($\uparrow$) | 95HD($\downarrow$) | ASD($\downarrow$) |
+| --------------- | :-------------: | ---------------- | ------------------- | ---------------- | --------------- |
+| UA-MT           |    6 labels (10%)    | 66.44            | 52.02              | 17.04            | 3.03            |
+| SASSNet         |        -        | 68.97            | 54.29               | 18.83            | 1.96            |
+| DTC             |        -        | 66.58            | 51.79               | 15.46            | 4.16            |
+| URPC            |        -        | 73.53            | 59.44               | 22.57            | 7.85            |
+| MC-Net          |        -        | 69.07            | 54.36               | 14.53            | 2.28            |
+| **DPMS (Ours)** |                 | **79.88**  $\pm 0.56$      |     **67.14** $\pm 0.48$            |        **7.77** $\pm 1.45$      | **1.56** $\pm 0.26$ |
 
 
 
