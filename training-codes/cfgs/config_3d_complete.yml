@@ -1,0 +1,82 @@
+# 1. directory
+root_path: "./data/LA"
+res_path: "./results/LA"
+
+
+# 2. training
+labeled_num: 4                # TBD:   4, 8, 16
+max_iterations: 15000
+max_samples: 80
+base_lr: 0.01
+batch_size: 4
+labeled_bs: 2
+poly: True
+
+
+# 3. models
+ema_decay: 0.99
+# ema_decay: 0.999
+
+flag_ema_mode_train: False
+# flag_ema_mode_train: True
+
+# flag_extra_weak: False
+flag_extra_weak: True
+
+# flag_ema_buffer: False
+flag_ema_buffer: True
+
+flag_pseudo_from_student: False
+# flag_pseudo_from_student: True
+
+flag_use_teacher_warmup: False
+# flag_use_teacher_warmup: True
+
+
+
+# 4. augs
+cutmix_prob: 1.0
+# cutmix_prob: 0.2
+# cutmix_prob: -1.0
+
+flag_use_dynamic_cutmix: False
+
+flag_use_color_augs: True
+# flag_use_color_augs: False
+
+add_noise_prob: 1.0
+
+
+
+# 5. loss
+consistency: 1.0 # 0.5, 1.0, 1.5, 2.0, 3.0
+# consistency: 0.5
+# consistency: 1.5
+# consistency: 2.0
+# consistency: 3.0
+
+# conf_threshold: 0.95 # 0.8, 0.85, 0.9, 0.95, 0.97
+# conf_threshold: 0.97
+# conf_threshold: 0.9
+# conf_threshold: 0.85
+conf_threshold: 0.8
+# conf_threshold: 0.75
+# conf_threshold: 0.7
+# conf_threshold: 0.65
+# conf_threshold: 0.6
+# conf_threshold: -0.1
+
+# flag_ulb_loss_type: "dice"  # ce, dice, dice+ce
+flag_ulb_loss_type: "ce"
+# flag_ulb_loss_type: "dice+ce"
+
+consistency_rampup: 40 # 20, 40, 60, 80, 100
+# consistency_rampup: 20
+# consistency_rampup: 60
+# consistency_rampup: 80
+# consistency_rampup: 100
+
+
+# 6. sampling
+flag_sampling_based_on_lb: False
+# flag_sampling_based_on_lb: True

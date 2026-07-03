@@ -1,0 +1,56 @@
+# 1. directory
+root_path: "./data/Pancreas"
+res_path: "./results/Pancreas"
+
+# 2. training
+labeled_num: 12                # TBD:   6, 12
+max_iterations: 15000
+max_samples: 62
+base_lr: 0.01
+batch_size: 4
+labeled_bs: 2
+poly: True
+
+
+# 3. models
+ema_decay: 0.99
+# ema_decay: 0.999
+
+flag_ema_mode_train: False
+# flag_ema_mode_train: True
+
+# flag_extra_weak: False
+flag_extra_weak: True
+
+# flag_ema_buffer: False
+flag_ema_buffer: True
+
+flag_pseudo_from_student: False
+# flag_pseudo_from_student: True
+
+flag_use_teacher_warmup: False
+# flag_use_teacher_warmup: True
+
+
+
+# 4. augs
+cutmix_prob: 1.0
+flag_use_dynamic_cutmix: False
+flag_use_color_augs: True
+add_noise_prob: 1.0
+
+
+
+# 5. loss
+consistency: 1.0
+conf_threshold: 0.8
+flag_ulb_loss_type: "ce"
+# flag_ulb_loss_type: "dice"
+# flag_ulb_loss_type: "dice+ce"
+consistency_rampup: 40 # 20, 40, 60, 80, 100
+
+# 6. sampling
+flag_sampling_based_on_lb: False
+
+# random seed
+seed: 2025 # 2022, 2023, 2024, 2025

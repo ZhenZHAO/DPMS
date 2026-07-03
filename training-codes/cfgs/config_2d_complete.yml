@@ -1,0 +1,82 @@
+# 1. directory
+root_path: "./data/ACDC"
+res_path: "./results/ACDC"
+
+
+# 2. training
+# labeled_num: 3                # TBD:   1, 3, 7, 14
+# labeled_num: 7
+labeled_num: 14
+max_iterations: 30000
+base_lr: 0.01
+batch_size: 24
+labeled_bs: 12
+poly: True
+
+
+
+# 3. models
+ema_decay: 0.99
+# ema_decay: 0.999
+
+# flag_ema_mode_train: False
+flag_ema_mode_train: True
+
+# flag_extra_weak: False
+flag_extra_weak: True
+
+# flag_ema_buffer: False
+flag_ema_buffer: True
+
+flag_pseudo_from_student: False
+# flag_pseudo_from_student: True
+
+flag_use_teacher_warmup: False
+# flag_use_teacher_warmup: True
+
+
+
+# 4. augs
+cutmix_prob: 1.0
+# cutmix_prob: 0.2
+# cutmix_prob: -0.1 # 0.8, 0.2, -0.1
+
+flag_use_dynamic_cutmix: False
+# flag_use_dynamic_cutmix: True
+flag_use_color_augs: True
+# flag_use_color_augs: False
+# flag_not_use_noise_weak: True
+flag_not_use_noise_weak: False
+
+
+
+# 5.loss
+# consistency: 1.0
+# consistency: 0.5
+# consistency: 1.5
+consistency: 2.0
+# consistency: 3.0
+
+# consistency_rampup: 200
+consistency_rampup: 150
+# consistency_rampup: 100
+# consistency_rampup: 50
+# consistency_rampup: 0
+
+conf_threshold: 0.95
+# conf_threshold: 0.97
+# conf_threshold: 0.90
+# conf_threshold: 0.85
+# conf_threshold: 0.80
+# conf_threshold: 0.75
+# conf_threshold: 0.70
+# conf_threshold: -0.1
+
+flag_ulb_loss_type: "dice"
+# flag_ulb_loss_type: "ce"
+# flag_ulb_loss_type: "dice+ce"
+
+
+# sampling
+# flag_sampling_based_on_lb: True
+flag_sampling_based_on_lb: False
